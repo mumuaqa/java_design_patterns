@@ -1,0 +1,35 @@
+@startuml
+class ComputerPart {
+}
+interface Component {
+~ void showPrice()
+}
+
+class Leaf {
+~ int price
+~ String name
++ <<Create>> Leaf(int,String)
++ void showPrice()
+}
+
+
+class Composite {
+~ List<Component> components
+~ String name
++ <<Create>> Composite(String)
++ void addComponnt(Component)
++ void showPrice()
+}
+
+
+class CompositeTest {
++ {static} void main(String[])
+}
+
+class study {
+}
+
+
+Component <|.. Leaf
+Component <|.. Composite
+@enduml

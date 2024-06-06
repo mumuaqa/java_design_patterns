@@ -1,0 +1,33 @@
+@startuml
+class 设计模式.建造者模式.study {
+}
+class 设计模式.建造者模式.Phone {
+- String os
+- int ram
+- int screenSize
+- String processor
+- int battery
++ String toString()
+}
+
+
+class 设计模式.建造者模式.shop {
++ {static} void main(String[])
+}
+
+class 设计模式.建造者模式.PhoneBuilder {
+- String os
+- int ram
+- int screenSize
+- String processor
+- int battery
++ PhoneBuilder setOs(String)
++ PhoneBuilder setScreenSize(int)
++ PhoneBuilder setProcessor(String)
++ PhoneBuilder setBattery(int)
++ PhoneBuilder setRam(int)
++ Phone getPhone()
+}
+
+
+@enduml

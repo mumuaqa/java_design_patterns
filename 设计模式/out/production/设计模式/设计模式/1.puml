@@ -1,0 +1,6 @@
+@startuml
+class 设计模式.FactoryMain {
++ {static} void main(String[])
+}
+
+@enduml

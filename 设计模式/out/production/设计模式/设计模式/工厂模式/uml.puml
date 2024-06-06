@@ -1,0 +1,33 @@
+@startuml
+class 设计模式.study {
+}
+interface 设计模式.OS {
++ void spec()
+}
+
+class 设计模式.Windows {
++ void spec()
+}
+
+class 设计模式.IOs {
++ void spec()
+}
+
+class 设计模式.OperatFactory {
++ OS getInstance(String)
+}
+
+class 设计模式.FactoryMain {
++ {static} void main(String[])
+}
+
+class 设计模式.Android {
++ void spec()
+}
+
+
+
+设计模式.OS <|.. 设计模式.Windows
+设计模式.OS <|.. 设计模式.IOs
+设计模式.OS <|.. 设计模式.Android
+@enduml
