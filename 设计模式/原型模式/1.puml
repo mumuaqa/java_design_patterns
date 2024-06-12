@@ -1,0 +1,34 @@
+@startuml
+class BookShop {
+- String shopName
+~ List<Book> books
++ String getShopName()
++ void setShopName(String)
++ List<Book> getBooks()
++ void setBooks(List<Book>)
++ void loadData()
++ String toString()
+# BookShop clone1()
++ BookShop clone()
+}
+
+
+class Book {
+- int bid
+- String bname
++ int getBid()
++ void setBid(int)
++ String getBname()
++ void setBname(String)
++ String toString()
+}
+
+
+class Demo {
++ {static} void main(String[])
+}
+
+
+
+Cloneable <|.. BookShop
+@enduml

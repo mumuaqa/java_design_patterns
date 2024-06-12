@@ -1,0 +1,31 @@
+@startuml
+interface Pen {
+~ void write(String)
+}
+
+class AssignmentWork {
+- Pen p
++ Pen getP()
++ void setP(Pen)
++ void writeAssignment(String)
+}
+
+
+class PilotPen {
++ void mark(String)
+}
+
+class School {
++ {static} void main(String[])
+}
+
+class PenAdapter {
+~ PilotPen pp
++ void write(String)
+}
+
+
+
+
+Pen <|.. PenAdapter
+@enduml

@@ -1,0 +1,42 @@
+@startuml
+interface Observer {
+~ void update()
++ void suscribeChannel(Channel)
+}
+
+interface Subject {
+~ void subscribe(subscriber)
+~ void unSubscribe(Observer)
++ void notifySubscribe()
++ void upload(String)
+}
+
+class subscriber {
++ String name
+- Channel channel
++ void update()
++ void suscribeChannel(Channel)
+}
+
+
+class Channel {
+- List<subscriber> subs
+~ String title
++ void subscribe(subscriber)
++ void unSubscribe(Observer)
++ void notifySubscribe()
++ void upload(String)
+}
+
+
+class Youtube {
++ {static} void main(String[])
+}
+
+class study {
+}
+
+
+Observer <|.. subscriber
+Subject <|.. Channel
+@enduml

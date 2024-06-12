@@ -1,4 +1,4 @@
-import java.util.Observer;
+
 
 public class Youtube {
     public static void main(String[]args){
@@ -18,7 +18,7 @@ public class Youtube {
 
         telusko.unSubscribe(s3);
 
-        s1.suscribeChannel(telusko);/
+        s1.suscribeChannel(telusko);
         s2.suscribeChannel(telusko);
         s3.suscribeChannel(telusko);
         s4.suscribeChannel(telusko);
