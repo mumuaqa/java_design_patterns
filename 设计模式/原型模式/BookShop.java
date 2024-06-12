@@ -33,13 +33,17 @@ public class BookShop implements Cloneable{
     public String toString(){
         return "BookShp[shopName="+shopName+",books="+books+"]";
     }
-    @Override
-    protected BookShop clone()throws CloneNotSupportedException{
+
+    protected BookShop clone1()throws CloneNotSupportedException{
         BookShop shop = new BookShop();
         for (Book b:this.getBooks()){
             shop.getBooks().add(b);
         }
         return shop;
+    }
+    @Override
+     public BookShop clone()throws CloneNotSupportedException{
+        return (BookShop) super.clone();
     }
 
 }
