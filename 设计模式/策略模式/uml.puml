@@ -1,0 +1,73 @@
+@startuml
+class StrategyInterfaceClass.FlyWithWings {
++ void fly()
+}
+
+interface StrategyInterface.FlyBehavior {
+~ void fly()
+}
+
+class DuckClass.miniDuckSimulator {
++ {static} void main(String[])
+}
+
+class StrategyInterfaceClass.FlyWithRocekt {
++ void fly()
+}
+
+abstract class AbstractClass.Duck {
+# FlyBehavior flyBehavior
+# QuackBehavior quackBehavior
++ void setFlyBehavior(FlyBehavior)
++ void setQuackBehavior(QuackBehavior)
++ void swim()
++ {abstract}void display()
++ void performQuack()
++ void performFly()
+}
+
+
+class StrategyInterfaceClass.QuckWithTools {
++ void quack()
+}
+
+class StrategyInterfaceClass.Squeak {
++ void quack()
+}
+
+class StrategyInterfaceClass.Quack {
++ void quack()
+}
+
+class StrategyInterfaceClass.MuteQuack {
++ void quack()
+}
+
+interface StrategyInterface.QuackBehavior {
+~ void quack()
+}
+
+class FlyDog.DogFly {
++ void display()
+}
+
+class StrategyInterfaceClass.FlyNoWay {
++ void fly()
+}
+
+class DuckClass.ModeDuck {
++ void display()
+}
+
+
+
+StrategyInterface.FlyBehavior <|.. StrategyInterfaceClass.FlyWithWings
+StrategyInterface.FlyBehavior <|.. StrategyInterfaceClass.FlyWithRocekt
+StrategyInterface.QuackBehavior <|.. StrategyInterfaceClass.QuckWithTools
+StrategyInterface.QuackBehavior <|.. StrategyInterfaceClass.Squeak
+StrategyInterface.QuackBehavior <|.. StrategyInterfaceClass.Quack
+StrategyInterface.QuackBehavior <|.. StrategyInterfaceClass.MuteQuack
+AbstractClass.Duck <|-- FlyDog.DogFly
+StrategyInterface.FlyBehavior <|.. StrategyInterfaceClass.FlyNoWay
+AbstractClass.Duck <|-- DuckClass.ModeDuck
+@enduml
